@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <!-- https://pokeapi.co/ -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,108 +12,166 @@
 
 <body>
     <header>
-        <div class="content">
+        <div id="b" class="content">
             <nav>
-                <p class="brand">dev<strong>superior</strong></p>
+                <p class="brand">poke<strong>superior</strong></p>
                 <ul>
-                    <li><a href="#catalog">Catalog</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#feature">Features</a></li>
+                    <li><a href="#catalog">Catálogo</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#feature">Novidades</a></li>
                     <button>Login</button>
                 </ul>
             </nav>
             <div class="header-block">
                 <div class="text">
-                    <h2>The Perfect car for you</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-                        asperiores?</p>
+                    <h2>O pokemon perfeito para você</h2>
+                    <p>Adquira aqui o seu pokemon!</p>
+                    <p>O pokesuperior conta com uma ampla variedade e qualidade em seus produtos.</p>
                 </div>
-                <img src="images/car-header.png" alt="Car">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"
+                    alt="Poke">
             </div>
         </div>
     </header>
     <section class="catalog" id="catalog">
         <div class="content">
             <div class="title-wrapper-catalog">
-                <p>Find what you want</p>
-                <h3>Catalog</h3>
+                <p>Encontre o pokemon que você deseja:</p>
+                <h3>Catálogo</h3>
             </div>
             <div class="filter-card">
-                <input type="text" class="search-input" placeholder="Choose your favorite model" />
-                <button class="search-button">Search</button>
+                <input id="pokeInput" type="text" class="search-input" placeholder="Coloque o nome aqui" />
+                <button class="search-button" onclick="pegaPokemonPorNome()">Buscar</button>
             </div>
             <div class="card-wrapper">
                 <div class="card-item">
-                    <img src="images/car-card.png" alt="Car" />
+                    <img id="poke1" alt="Poke" />
                     <div class="card-content">
-                        <h3>Audi Supra TT</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellemdus.</p>
-                        <button type="button">I want this!</button>
+                        <h3 id="pokeName1"></h3>
+                        <button type="button">Eu quero esse!</button>
                     </div>
                 </div>
                 <div class="card-item">
-                    <img src="images/car-card.png" alt="Car" />
+                    <img id="poke2" alt="Poke" />
                     <div class="card-content">
-                        <h3>Audi Supra TT</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellemdus.</p>
-                        <button type="button">I want this!</button>
+                        <h3 id="pokeName2"></h3>
+                        <button type="button">Eu quero esse!</button>
                     </div>
                 </div>
                 <div class="card-item">
-                    <img src="images/car-card.png" alt="Car" />
-                    <div class="card-content">
-                        <h3>Audi Supra TT</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellemdus.</p>
-                        <button type="button">I want this!</button>
+                    <img id="poke3" alt="Poke" />
+                    <div id="a" class="card-content">
+                        <h3 id="pokeName3"></h3>
+                        <button type="button">Eu quero esse!</button>
                     </div>
                 </div>
                 <div class="card-item">
-                    <img src="images/car-card.png" alt="Car" />
+                    <img id="poke4" alt="Poke" />
                     <div class="card-content">
-                        <h3>Audi Supra TT</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellemdus.</p>
-                        <button type="button">I want this!</button>
+                        <h3 id="pokeName4"></h3>
+                        <button type="button">Eu quero esse!</button>
                     </div>
                 </div>
                 <div class="card-item">
-                    <img src="images/car-card.png" alt="Car" />
+                    <img id="poke5" alt="Poke" />
                     <div class="card-content">
-                        <h3>Audi Supra TT</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellemdus.</p>
-                        <button type="button">I want this!</button>
+                        <h3 id="pokeName5"></h3>
+                        <button type="button">Eu quero esse!</button>
                     </div>
                 </div>
                 <div class="card-item">
-                    <img src="images/car-card.png" alt="Car" />
+                    <img id="poke6" alt="Poke" />
                     <div class="card-content">
-                        <h3>Audi Supra TT</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellemdus.</p>
-                        <button type="button">I want this!</button>
+                        <h3 id="pokeName6"></h3>
+                        <button type="button">Eu quero esse!</button>
                     </div>
                 </div>
                 <div class="card-item">
-                    <img src="images/car-card.png" alt="Car" />
+                    <img id="poke7" alt="Poke" />
                     <div class="card-content">
-                        <h3>Audi Supra TT</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellemdus.</p>
-                        <button type="button">I want this!</button>
+                        <h3 id="pokeName7"></h3>
+                        <button type="button">Eu quero esse!</button>
                     </div>
                 </div>
                 <div class="card-item">
-                    <img src="images/car-card.png" alt="Car" />
+                    <img id="poke8" alt="Poke" />
                     <div class="card-content">
-                        <h3>Audi Supra TT</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellemdus.</p>
-                        <button type="button">I want this!</button>
+                        <h3 id="pokeName8"></h3>
+                        <button type="button">Eu quero esse!</button>
                     </div>
                 </div>
                 <div class="card-item">
-                    <img src="images/car-card.png" alt="Car" />
+                    <img id="poke9" alt="Poke" />
                     <div class="card-content">
-                        <h3>Audi Supra TT</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellemdus.</p>
-                        <button type="button">I want this!</button>
+                        <h3 id="pokeName9"></h3>
+                        <button type="button">Eu quero esse!</button>
                     </div>
+                </div>
+                <div class="card-item">
+                    <img id="poke10" alt="Poke" />
+                    <div class="card-content">
+                        <h3 id="pokeName10"></h3>
+                        <button type="button">Eu quero esse!</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img id="poke11" alt="Poke" />
+                    <div class="card-content">
+                        <h3 id="pokeName11"></h3>
+                        <button type="button">Eu quero esse!</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img id="poke12" alt="Poke" />
+                    <div class="card-content">
+                        <h3 id="pokeName12"></h3>
+                        <button type="button">Eu quero esse!</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img id="poke13" alt="Poke" />
+                    <div class="card-content">
+                        <h3 id="pokeName13"></h3>
+                        <button type="button">Eu quero esse!</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img id="poke14" alt="Poke" />
+                    <div class="card-content">
+                        <h3 id="pokeName14"></h3>
+                        <button type="button">Eu quero esse!</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img id="poke15" alt="Poke" />
+                    <div class="card-content">
+                        <h3 id="pokeName15"></h3>
+                        <button type="button">Eu quero esse!</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img id="poke16" alt="Poke" />
+                    <div class="card-content">
+                        <h3 id="pokeName16"></h3>
+                        <button type="button">Eu quero esse!</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img id="poke17" alt="Poke" />
+                    <div class="card-content">
+                        <h3 id="pokeName17"></h3>
+                        <button type="button">Eu quero esse!</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img id="poke18" alt="Poke" />
+                    <div class="card-content">
+                        <h3 id="pokeName18"></h3>
+                        <button type="button">Eu quero esse!</button>
+                    </div>
+                </div>
+                <div class="filter-card">
+                    <button class="search-button" onclick="pegaProximosPokemons()">Ver mais pokemons</button>
                 </div>
             </div>
         </div>
@@ -120,81 +179,28 @@
     <section class="about" id="about">
         <div class="content">
             <div class="title-wrapper-about">
-                <p>Know about us</p>
-                <h3>about</h3>
+                <p>Saiba sobre Pokemon</p>
+                <h3>Sobre</h3>
             </div>
             <div class="about-content">
                 <div class="left">
-                    <img src="images/about.png" alt="About" />
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
+                        alt="About" />
                 </div>
                 <div class="right">
-                    <h3>join technology and mobility</h3>
+                    <h3>Saiba mais sobre Pokemon</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repudiandae ut inventore magni repellendus ab ad itaque facere. A
-                        tenetur quam, nobis tempore illum laborum ipsa fuga, itaque
-                        possimus repellat ad perspiciatis, velit reiciendis eos facilis
-                        sapiente blanditiis quas officia hic beatae quibusdam! Quod
-                        eligendi porro possimus voluptatum ad ipsum sapiente soluta,
-                        maiores nobis tenetur adipisci officiis nisi illum quae natus
-                        nostrum tempora accusantium blanditiis? Rem nesciunt illum
-                        dolorum, perferendis quos consequatur suscipit cumque fugiat alias
-                        sint repellat qui adipisci error est distinctio doloribus labore
-                        sunt modi eos odio quibusdam dicta. Dignissimos voluptate illum
-                        possimus quo. Ducimus repellat doloribus quisquam quidem?
+                        <strong>Pokémon (ポケモン)</strong> é uma franquia de mídia que pertence a The <strong>Pokémon
+                            Company,</strong> tendo sido criada por
+                        Satoshi Tajiri em 1995. Ela é centrada em criaturas ficcionais chamadas "Pokémon", que os seres
+                        humanos capturam e os treinam para lutarem entre si com seus ataques de diversos tipos.
+                        A franquia começou com um par de jogos lançados para o Game Boy original, desenvolvidos pela
+                        <strong>Game Freak e publicados pela Nintendo.</strong>Atualmente, a franquia se estende em
+                        jogos, cartas
+                        colecionáveis, série de televisão, além de filmes, mangás e brinquedos. Pokémon é a segunda
+                        franquia de mídia de jogos mais bem sucedida e lucrativa do mundo, atrás da franquia de Mario
+                        que também pertence a Nintendo.
                     </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="features" id="features">
-        <div class="content">
-            <div class="title-wrapper-features">
-                <p>what you can do</p>
-                <h3>Features</h3>
-            </div>
-            <div class="feature-card-block">
-                <div class="feature-card-item">
-                    <img src="images/feature-planet.png" alt="Feature" />
-                    <div class="feature-text-content">
-                        <h3>Title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="feature-card-item">
-                    <img src="images/feature-planet.png" alt="Feature" />
-                    <div class="feature-text-content">
-                        <h3>Title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="feature-card-item">
-                    <img src="images/feature-planet.png" alt="Feature" />
-                    <div class="feature-text-content">
-                        <h3>Title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="feature-card-item">
-                    <img src="images/feature-planet.png" alt="Feature" />
-                    <div class="feature-text-content">
-                        <h3>Title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="feature-card-item">
-                    <img src="images/feature-planet.png" alt="Feature" />
-                    <div class="feature-text-content">
-                        <h3>Title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="feature-card-item">
-                    <img src="images/feature-planet.png" alt="Feature" />
-                    <div class="feature-text-content">
-                        <h3>Title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -203,33 +209,107 @@
         <div class="main">
             <div class="content footer-links">
                 <div class="footer-company">
-                    <h4>Company</h4>
-                    <h6>About</h6>
-                    <h6>Contact</h6>
-                </div>
-                <div class="footer-rental">
-                    <h4>Rental</h4>
-                    <h6>Chauffer-Driven</h6>
-                    <h6>Self-Drive</h6>
-                    <h6>Help</h6>
+                    <h4>Companhia</h4>
+                    <h6>Sobre</h6>
+                    <h6>Contato</h6>
                 </div>
                 <div class="footer-social">
-                    <h4>Stay Connected</h4>
+                    <h4>Permaneça conectado</h4>
                     <div class="social-icons">
                         <img src="images/instagram.png" alt="Instagram">
                         <img src="images/facebook.png" alt="Facebook">
                     </div>
                 </div>
                 <div class="footer-contact">
-                    <h4>Contact US</h4>
+                    <h4>Nos contate</h4>
                     <h6>+55 31 988776655</h6>
-                    <h6>contato@devsuperior.com.br</h6>
-                    <h6>Nome da Rua, Belo Horizonte MG </h6>
+                    <h6>contato@pokesuperior.com.br</h6>
+                    <h6>Baraúna-RN</h6>
                 </div>
             </div>
         </div>
-        <div class="last">DevSuperior 2021 - Use like you want</div>
+        <div class="last">PokeSuperior - 2022</div>
     </footer>
+    <script type="text/javascript"> //código js
+        var pokemons = []; //recebe lista de pokemons
+        var next;
+        function pegaListaDePokemons() {
+            let requisicaoPegarListaPokemons = new XMLHttpRequest(); //iniciando uma requisição
+            var url = "https://pokeapi.co/api/v2/pokemon"; // endereço da api
+            requisicaoPegarListaPokemons.open("GET", url, false); //  abrindo requisição sícrona
+            requisicaoPegarListaPokemons.onreadystatechange = function () { // estado da resquisição
+                if (requisicaoPegarListaPokemons.readyState == 4) { 
+                    var jsonResponse = JSON.parse(requisicaoPegarListaPokemons.responseText);
+                    console.log(jsonResponse);
+                    pokemons = jsonResponse.results; //vetor recebendo cada objeto pokemon
+                    next = jsonResponse.next;
+                }
+            };
+            requisicaoPegarListaPokemons.send(null);
+        }
+
+        function pegaProximosPokemons() {
+            let requisicaoPegarListaPokemons = new XMLHttpRequest();
+            requisicaoPegarListaPokemons.open("GET", next, false);
+            requisicaoPegarListaPokemons.onreadystatechange = function () {
+                if (requisicaoPegarListaPokemons.readyState == 4) {
+                    var jsonResponse = JSON.parse(requisicaoPegarListaPokemons.responseText);
+                    pokemons = jsonResponse.results;
+                    next = jsonResponse.next;
+                }
+            };
+            requisicaoPegarListaPokemons.send(null);
+            pegaPokemonsUmAUm();
+        }
+
+        function pegaPokemonEspecifico(pokemon, id) {
+            var idImg = "poke" + id;
+            var idPokeName = "pokeName" + id;
+            let requisicaoPegarPokemon = new XMLHttpRequest();
+            requisicaoPegarPokemon.open("GET", pokemon.url, false);
+            requisicaoPegarPokemon.onreadystatechange = function () {
+                if (requisicaoPegarPokemon.readyState == 4) {
+                    var jsonResponse = JSON.parse(requisicaoPegarPokemon.responseText);
+                    var imagem = document.getElementById(idImg);
+                    var pokeName = document.getElementById(idPokeName);
+                    pokeName.innerHTML = jsonResponse.name;
+                    imagem.src = jsonResponse.sprites.other.dream_world.front_default;
+                }
+            };
+            requisicaoPegarPokemon.send(null);
+        }
+
+        function pegaPokemonPorNome() {
+            var idImg = "poke1";
+            var idPokeName = "pokeName1";
+            var nome = document.getElementById("pokeInput").value;
+            nome = nome.toString().toLowerCase();
+            let requisicaoPegarPokemon = new XMLHttpRequest();
+            requisicaoPegarPokemon.open("GET", "https://pokeapi.co/api/v2/pokemon/" + nome, false);
+            requisicaoPegarPokemon.onreadystatechange = function () {
+                if (requisicaoPegarPokemon.readyState == 4) {
+                    var jsonResponse = JSON.parse(requisicaoPegarPokemon.responseText);
+                    var imagem = document.getElementById(idImg);
+                    var pokeName = document.getElementById(idPokeName);
+                    pokeName.innerHTML = jsonResponse.name;
+                    imagem.src = jsonResponse.sprites.other.dream_world.front_default;
+                }
+            };
+            requisicaoPegarPokemon.send(null);
+        }
+
+        function pegaPokemonsUmAUm() {
+            console.log(pokemons)
+            for (let i = 0; i < 18; i++) {
+                pegaPokemonEspecifico(pokemons[i], i + 1);
+            }
+        }
+
+        // execucao principal
+        pegaListaDePokemons();
+        pegaPokemonsUmAUm();
+
+    </script>
 </body>
 
 </html>
